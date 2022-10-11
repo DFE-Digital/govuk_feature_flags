@@ -3,7 +3,7 @@
 require_relative "lib/feature_flags/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "feature_flags"
+  spec.name = "govuk_feature_flags"
   spec.version = FeatureFlags::VERSION
   spec.authors = ["Felix Clack"]
   spec.email = ["felix.clack@digital.education.gov.uk"]

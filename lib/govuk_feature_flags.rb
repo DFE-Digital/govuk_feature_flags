@@ -3,7 +3,7 @@
 require "feature_flags/version"
 require "feature_flags/engine"
 
-module FeatureFlags
+module GovukFeatureFlags
   def self.config_path
     path = defined?(Rails) ? Rails.root : File
     path.join("config", "feature_flags.yml")
