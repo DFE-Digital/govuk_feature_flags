@@ -11,7 +11,7 @@ module FeatureFlags
     end
 
     FEATURES =
-      FeatureFlags
+      GovukFeatureFlags
         .config
         .fetch("feature_flags", {})
         .to_h do |name, values|

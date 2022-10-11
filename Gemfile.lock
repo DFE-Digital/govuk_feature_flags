@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    feature_flags (0.1.0)
+    govuk_feature_flags (0.1.0)
       rails (>= 7.0.4)
 
 GEM
@@ -131,8 +131,6 @@ GEM
       activesupport (>= 6.1.4.4)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
-    jsbundling-rails (1.0.3)
-      railties (>= 6.0.0)
     json (2.6.2)
     loofah (2.19.0)
       crass (~> 1.0.2)
@@ -293,10 +291,9 @@ DEPENDENCIES
   cssbundling-rails
   cuprite
   factory_bot_rails
-  feature_flags!
   govuk-components
   govuk_design_system_formbuilder
-  jsbundling-rails
+  govuk_feature_flags!
   pg
   prettier_print
   propshaft
