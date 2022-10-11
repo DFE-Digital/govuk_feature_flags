@@ -1,0 +1,38 @@
+<% content_for :page_title, 'Features' %>
+
+<h1 class="govuk-heading-l">Features</h1>
+
+<% @features.each do |feature_name, feature_flag| %>
+  <h2 class="govuk-heading-m">
+    <%= feature_name.humanize %>
+    <span class="govuk-visually-hidden">
+      - <%= FeatureFlags::FeatureFlag.active?(feature_name) ? 'Active' : 'Inactive' %>
+    </span>
+  </h2>
+  <% rows = [
+      { key: { text: 'Description'},
+        value: { text: feature_flag.description },
+      },
+      { key: { text: 'Status'},
+        value: {
+          text: govuk_tag(
+            text: FeatureFlags::FeatureFlag.active?(feature_name) ? 'Active' : 'Inactive',
+            colour: FeatureFlags::FeatureFlag.active?(feature_name) ? 'green' : 'grey',
+          )
+        },
+      },
+      { key: { text: 'Author'},
+        value: { text: feature_flag.author },
+      },
+  ] %>
+  <%= govuk_summary_list(rows: rows) %>
+  <% if FeatureFlags::FeatureFlag.active?(feature_name) then %>
+    <%= form_with(url: deactivate_feature_flag_path(feature_name), method: :patch) do |f| %>
+      <%= f.govuk_submit 'Deactivate ' + feature_name.humanize, prevent_double_click: false %>
+    <% end %>
+  <% else %>
+    <%= form_with(url: activate_feature_flag_path(feature_name), method: :patch) do |f| %>
+      <%= f.govuk_submit 'Activate ' + feature_name.humanize, prevent_double_click: false %>
+    <% end %>
+  <% end %>
+<% end %>

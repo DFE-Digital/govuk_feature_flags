@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feature flags</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag "feature_flags/main" %>
+</head>
+<body>
+
+  <%= render(FlashMessageComponent.new(flash:)) %>
+  <%= yield %>
+
+</body>
+</html>

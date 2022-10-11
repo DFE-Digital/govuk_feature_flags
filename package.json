@@ -1,0 +1,17 @@
+{
+  "name": "feature_flags",
+  "private": "true",
+  "dependencies": {
+    "esbuild": "^0.15.10",
+    "govuk-frontend": "4.3.1",
+    "sass": "^1.55.0"
+  },
+  "scripts": {
+    "build:css": "sass ./app/assets/stylesheets/feature_flags/main.sass.scss:./app/assets/builds/feature_flags/main.css --no-source-map --load-path=node_modules --quiet-deps",
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets"
+  },
+  "devDependencies": {
+    "@prettier/plugin-ruby": "^3.2.2",
+    "prettier": "^2.7.1"
+  }
+}

@@ -1,0 +1,4 @@
+feature_flags:
+  service_open:
+    author: Felix Clack
+    description: Allow users to access the service
