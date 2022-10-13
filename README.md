@@ -5,8 +5,8 @@ a basic admin UI.
 
 ## Installation
 
-1. Add `feature_flags` gem to your `Gemfile`
-1. Run `rails feature_flags:install:migrations`
+1. Add `govuk_feature_flags` gem to your `Gemfile`
+1. Run `rails railties:install:migrations`
 1. Run `rails db:migrate`
 1. Mount the engine in the appropriate place in your routes file: eg. `mount FeatureFlags::Engine => "/features"`
 
