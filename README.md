@@ -9,6 +9,7 @@ a basic admin UI.
 1. Run `rails feature_flags:install:migrations`
 1. Run `rails db:migrate`
 1. Mount the engine in the appropriate place in your routes file: eg. `mount FeatureFlags::Engine => "/features"`
+1. Ensure your application has a layout named `application`. This engine uses the parent application layout and will throw an error if it is not present.
 
 ## Usage
 
