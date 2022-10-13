@@ -39,11 +39,11 @@ RSpec.describe "Feature Flags", type: :system do
 
   def then_the_service_open_flag_is_on
     expect(page).to have_content("Feature “Service open” activated")
-    expect(page).to have_content("Service open\n- Active")
+    expect(page).to have_content("Service open - Active")
   end
 
   def then_the_service_open_flag_is_off
     expect(page).to have_content("Feature “Service open” deactivated")
-    expect(page).to have_content("Service open\n- Inactive")
+    expect(page).to have_content("Service open - Inactive")
   end
 end

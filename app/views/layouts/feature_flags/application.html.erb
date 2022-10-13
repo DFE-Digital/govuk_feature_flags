@@ -9,7 +9,9 @@
 </head>
 <body>
 
-  <%= render(FlashMessageComponent.new(flash:)) %>
+  <% flash.each do |key, message| %>
+    <p class="#{key}"><%= message %></p>
+  <% end %>
   <%= yield %>
 
 </body>
