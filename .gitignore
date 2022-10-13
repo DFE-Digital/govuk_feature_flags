@@ -1,4 +1,5 @@
 !app/assets/builds/.keep
+!app/assets/builds/feature_flags/.keep
 !log/.keep
 !tmp/.keep
 !tmp/pids/
