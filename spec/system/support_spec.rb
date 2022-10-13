@@ -15,10 +15,22 @@ RSpec.describe "Feature Flags", type: :system do
     then_the_service_open_flag_is_off
   end
 
+  it "customising the layout" do
+    given_i_configured_a_custom_layout
+    when_i_visit_the_feature_flags_page
+    then_i_see_the_custom_layout
+  end
+
   private
 
   def given_there_is_a_feature
     create(:feature)
+  end
+
+  def given_i_configured_a_custom_layout
+    GovukFeatureFlags.config = {
+      'layout' => 'custom'
+    }
   end
 
   def when_i_visit_the_feature_flags_page
@@ -31,6 +43,10 @@ RSpec.describe "Feature Flags", type: :system do
 
   def when_i_deactivate_the_service_open_feature_flag
     click_on "Deactivate Service open"
+  end
+
+  def then_i_see_the_custom_layout
+    expect(page).to have_content("Custom layout")
   end
 
   def then_i_see_the_feature_flags

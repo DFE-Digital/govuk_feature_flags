@@ -12,4 +12,8 @@ module GovukFeatureFlags
   def self.config
     @config ||= YAML.load(ERB.new(File.read(config_path)).result)
   end
+
+  def self.config=(config)
+    @config = config
+  end
 end

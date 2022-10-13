@@ -2,7 +2,7 @@
 
 module FeatureFlags
   class ApplicationController < ActionController::Base
-    layout "application"
+    layout -> { GovukFeatureFlags.config.fetch("layout", "application") }
 
     default_form_builder(GOVUKDesignSystemFormBuilder::FormBuilder)
   end

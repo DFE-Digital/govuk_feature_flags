@@ -9,13 +9,26 @@ a basic admin UI.
 1. Run `rails railties:install:migrations`
 1. Run `rails db:migrate`
 1. Mount the engine in the appropriate place in your routes file: eg. `mount FeatureFlags::Engine => "/features"`
-1. Ensure your application has a layout named `application`. This engine uses the parent application layout and will throw an error if it is not present.
 
 ## Usage
 
 Define your feature flags in `config/feature_flags.yml`
 
 ```yaml
+feature_flags:
+  service_open:
+    author: Your name
+    description: Allow users to access the service
+```
+
+## Configuration
+
+The engine assumes the parent app uses a layout with the name `application.html.erb`.
+
+To use a different layout template set the `layout` option in the config file.
+
+```yaml
+layout: admin
 feature_flags:
   service_open:
     author: Your name
