@@ -3,6 +3,8 @@
 A simple implementation of feature flags that are persisted in the database and controlled via
 a basic admin UI.
 
+![Screenshot of the feature flags in a support UI](docs/readme-screenshot.png)
+
 ## Installation
 
 1. Add `govuk_feature_flags` gem to your `Gemfile`
