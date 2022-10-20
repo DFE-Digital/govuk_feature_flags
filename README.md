@@ -35,6 +35,14 @@ feature_flags:
     description: Allow users to access the service
 ```
 
+`FeatureFlagsController` can be configured to inherit from a controller in the parent application, useful if you want to mount behind authentication or to inherit other behaviours.
+
+```yaml
+parent_controller: 'SupportInterface::SupportInterfaceController'
+feature_flags:
+    ...
+```
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
