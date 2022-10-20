@@ -21,10 +21,26 @@ RSpec.describe "Feature Flags", type: :system do
     then_i_see_the_custom_layout
   end
 
+  it "customising parent_controller" do
+    given_i_configured_a_custom_parent_controller
+    when_i_visit_the_feature_flags_page
+    then_custom_controller_behaviours_are_triggered
+  end
+
   private
 
   def given_there_is_a_feature
     create(:feature)
+  end
+
+  def given_i_configured_a_custom_parent_controller
+    GovukFeatureFlags.config = {
+      "parent_controller" => "CustomController"
+    }
+  end
+
+  def then_custom_controller_behaviours_are_triggered
+    expect(page).to have_content("Custom controller!")
   end
 
   def given_i_configured_a_custom_layout

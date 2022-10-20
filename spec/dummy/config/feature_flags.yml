@@ -1,3 +1,4 @@
+parent_controller: "CustomController"
 feature_flags:
   service_open:
     author: Felix Clack

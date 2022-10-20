@@ -16,4 +16,8 @@ module GovukFeatureFlags
   def self.config=(config)
     @config = config
   end
+
+  def self.parent_controller
+    config.fetch("parent_controller", "ApplicationController")
+  end
 end

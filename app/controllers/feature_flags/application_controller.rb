@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module FeatureFlags
-  class ApplicationController < ActionController::Base
+  class ApplicationController < GovukFeatureFlags.parent_controller.constantize
     layout -> { GovukFeatureFlags.config.fetch("layout", "application") }
     helper all_helpers_from_path "app/helpers"
 
