@@ -38,9 +38,8 @@ feature_flags:
 `FeatureFlagsController` can be configured to inherit from a controller in the parent application, useful if you want to mount behind authentication or to inherit other behaviours.
 
 ```yaml
-parent_controller: 'SupportInterface::SupportInterfaceController'
+parent_controller: "SupportInterface::SupportInterfaceController"
 feature_flags:
-    ...
 ```
 
 ## License
