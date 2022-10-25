@@ -1,0 +1,36 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - "**"
+      - "!main"
+
+jobs:
+  prettier:
+    name: Prettier
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Prepare application environment
+        uses: ./.github/actions/prepare-app-env
+
+      - name: Run Prettier
+        run: yarn prettier --check --ignore-unknown --loglevel warn '**/*'
+
+  rubocop:
+    name: Rubocop
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Prepare application environment
+        uses: ./.github/actions/prepare-app-env
+
+      - name: Run Rubocop
+        run: bin/bundle exec rubocop
