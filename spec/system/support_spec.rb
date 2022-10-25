@@ -34,9 +34,7 @@ RSpec.describe "Feature Flags", type: :system do
   end
 
   def given_i_configured_a_custom_parent_controller
-    GovukFeatureFlags.config = {
-      "parent_controller" => "CustomController"
-    }
+    GovukFeatureFlags.config = { "parent_controller" => "CustomController" }
   end
 
   def then_custom_controller_behaviours_are_triggered
@@ -44,9 +42,7 @@ RSpec.describe "Feature Flags", type: :system do
   end
 
   def given_i_configured_a_custom_layout
-    GovukFeatureFlags.config = {
-      'layout' => 'custom'
-    }
+    GovukFeatureFlags.config = { "layout" => "custom" }
   end
 
   def when_i_visit_the_feature_flags_page
