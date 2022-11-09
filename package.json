@@ -4,7 +4,7 @@
   "dependencies": {
     "esbuild": "^0.15.12",
     "govuk-frontend": "4.3.1",
-    "sass": "^1.55.0"
+    "sass": "^1.56.1"
   },
   "scripts": {
     "build:css": "sass ./app/assets/stylesheets/feature_flags/main.sass.scss:./app/assets/builds/feature_flags/main.css --no-source-map --load-path=node_modules --quiet-deps",
