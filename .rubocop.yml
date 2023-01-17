@@ -10,6 +10,9 @@ inherit_mode:
   merge:
     - Exclude
 
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
 Lint/SuppressedException:
   Exclude:
     - lib/feature_flags/engine.rb
