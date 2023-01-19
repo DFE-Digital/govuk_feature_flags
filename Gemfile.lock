@@ -141,7 +141,7 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    minitest (5.16.3)
+    minitest (5.17.0)
     net-imap (0.3.1)
       net-protocol
     net-pop (0.1.2)
@@ -249,7 +249,7 @@ GEM
     rubocop-rspec (2.12.1)
       rubocop (~> 1.31)
     ruby-progressbar (1.11.0)
-    shoulda-matchers (5.2.0)
+    shoulda-matchers (5.3.0)
       activesupport (>= 5.2.0)
     syntax_tree (5.2.0)
       prettier_print (>= 1.2.0)
