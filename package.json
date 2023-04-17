@@ -2,7 +2,7 @@
   "name": "feature_flags",
   "private": "true",
   "dependencies": {
-    "esbuild": "^0.17.8",
+    "esbuild": "^0.17.17",
     "govuk-frontend": "4.5.0",
     "sass": "^1.58.1"
   },
