@@ -29,7 +29,7 @@ end
 group :test do
   gem "capybara"
   gem "cuprite"
-  gem "puma", "~> 6.1"
+  gem "puma", "~> 6.2"
   gem "rspec-rails"
   gem "shoulda-matchers"
 end
